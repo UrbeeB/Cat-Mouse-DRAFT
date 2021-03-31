@@ -16,10 +16,6 @@ gardenImg = loadImage("images/garden.png");
 function setup() {
 	createCanvas(800, 750);
 
-  garden = createSprite(400, 375);
-  garden.addImage("Garden", gardenImg);
-  garden.scale = 1.1;
-
   cat = createSprite(620, 600, 20, 50);
   cat.addAnimation("catFirstImage", catImgF);
   cat.scale = 0.2;
@@ -31,10 +27,7 @@ function setup() {
 
 
 function draw() {
-  background(0);
-
-  var collisionDetectorX = 0;
-  collisionDetectorX = cat.width/2 + mouse.width/2
+  background(gardenImg);
 
   if(cat.collide(mouse)){
     cat.velocityX = 0;
